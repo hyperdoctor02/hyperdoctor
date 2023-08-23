@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Nanum+Myeongjo&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* layout */
+#wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#inner {
+    width: 1380px;
+    margin: 0 auto;
+}
+
+
+/* header */
+.topBox {width: 100%;height: 800px;padding-top: 160px;position: relative;background-image: url(../images/se04_bg.png);background-size: cover;background-repeat: no-repeat;background-position:0% 10%;}
+.topBox .topBtn {display: block;position: absolute;top: 10px; left: 10px;}
+.topBox .topBtn img {width: 70%;}
+.topBox .title {position: absolute;left: 20%;top: 50%;text-transform: uppercase;transform: translateY(-50%);word-spacing: 1.2px;}
+.topBox .title {font-size:5em; font-weight: bold;color: #fff;}
+/*Splitting텍스트애니메이션*/
+.topBox .title.motion .char {
+    animation: textAni 2s both;
+    animation-delay: calc(0.08s * var(--char-index));  /*한글자씩 0.08초로;*/
+}
+
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+}
+/* sampleList */
+.sampleList {width: 100%;height: auto;padding-top: 130px; padding-bottom: 130px;}
+.sampleList #inner {width: 50%;}
+.sampleList #inner .content {display: flex;justify-content: space-between;position: relative;}
+.sampleList #inner .content li a {display: block;}
+.sampleList #inner .content li a .thumb {width: 100%;height: 100%;position: relative;overflow: hidden;box-sizing: border-box; border-radius: 10px;}
+.sampleList #inner .content li a .thumb .iconBox {width: 100%; height: 100%;background: rgba(0,0,0,0.4);position: absolute; top: 0; left: 0; display: none;transition: all 0.5s;}
+.sampleList #inner .content li a:hover .thumb .iconBox {display: block;transition: all 0.5s;} 
+.sampleList #inner .content li a .thumb .iconBox .plus {width: 70px; height: 70px; box-sizing: border-box;
+border-radius: 100%; background: #f8b922; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.sampleList #inner .content li a .thumb .iconBox .plus:before{width:24px;height:2px;content:"";background:#fff;position: absolute;top:34px;left:23px;}
+.sampleList #inner .content li a .thumb .iconBox .plus:after {width:2px;height:24px;content:"";background:#fff;position: absolute;top:23px;left:34px;}
+
+/* sampleList-txt */
+.sampleList #inner .content li a .txt {font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: bold;letter-spacing: -1px;color: #000;text-align: left;padding-top: 10px;}

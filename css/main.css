@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Nanum+Myeongjo&display=swap');
+
+/* reset */
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 600;}
+header, main, footer, section, article, aside, nav {display: block;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle; max-width: 100%;}
+li {list-style: none;}
+
+
+/*layout*/
+#wrap {position: relative; font-family: 'Noto Sans KR', sans-serif;letter-spacing: -1px;width: 100%;height: 100%; margin: 0 auto;}
+#inner {max-width: 1380px;margin: auto;}
+
+/*fullpage*/
+.section {background-size: cover; position: relative;}
+
+#section1 .title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    font-size: 5em;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/*Splitting텍스트애니메이션*/
+#section1 .title.motion .char {
+    animation: textAni 2s both;
+    animation-delay: calc(0.08s * var(--char-index));  /*한글자씩 0.08초로;*/
+}
+
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+}
+
+
+/* section1 */
+#section1 {width: 100%;height: 100vh;position: relative;z-index: 1; margin-bottom: 200px;}
+#section1 .technology {width: 100%; height: 100vh; object-fit: cover; position: absolute; left: 0; top:0;}
+
+/* section2 */
+#section2 {width: 100%;height: auto; background: #fff;padding-bottom: 50px;}
+#section2 #inner .line {display: block; position: absolute; top:0; width: 1px; height: 100%;background: #eee;}
+#section2 #inner .line.a {left: 15%;}
+#section2 #inner .line.b {left: 50%;}
+#section2 #inner .line.c {left: 85%;}
+#section2 #inner .introduce .tit {font-size: 3em;text-transform: uppercase;font-family: 'Montserrat', sans-serif;font-weight: bold;position: absolute;top: 10%;left: 15%;letter-spacing: 1.5px;}
+#section2 #inner .introduce .tit>p {font-size: 18px;font-weight: normal; letter-spacing: 0;}
+#section2 #inner .introduce .Box {width: 100%;height: 800px; margin: auto;position: relative;}
+#section2 #inner .introduce .Box .cont a {display:block;}
+#section2 #inner .introduce .Box .cont a .img {width: 100%;overflow: hidden;}
+#section2 #inner .introduce .Box .cont a .img img {transition: all 1s;}
+#section2 #inner .introduce .Box .cont a:hover .img img {transform: scale(1.1);}
+#section2 #inner .introduce .Box .cont a .txt {color: #333;font-size: 1.2em;}
+#section2 #inner .introduce .Box .cont a .txt .en {font-size: 2em;letter-spacing: 1.5px;}
+#section2 #inner .introduce .Box .cont a .txt .en span {color: #f8b922;}
+#section2 #inner .introduce .Box .cont a .txt p {font-size: 1.2em;padding-bottom: 15px;}
+#section2 #inner .introduce .Box .cont a .moreBtn {width: 100%; border:1px solid #f8b922;padding: 3px 10px;border-radius: 10px; transition: all 0.2s;}
+#section2 #inner .introduce .Box .cont a .moreBtn:hover {background: #f8b922;color: #fff; transition: all 0.2s;}
+/* contBox1 */
+#section2 #inner .introduce .Box .contBox1 {position: absolute;right: 2%;top: 5%;box-shadow: 10px 5px 5px #e4e4e4;}
+#section2 #inner .introduce .Box .contBox1 a .txt {display: block; position: absolute;top: 0;right: 0px;text-align: right;background: #fff;padding: 50px 21px ;}
+#section2 #inner .introduce .Box .contBox1:hover, #section2 #inner .introduce .list .contBox1:focus {border: 3px solid #f8b922; transition: all 0.1s;}
+
+/* contBox2 */
+#section2 #inner .introduce .Box .contBox2 {position: absolute;left: 2%;top:30%;box-shadow: -10px 5px 5px #e4e4e4;}
+#section2 #inner .introduce .Box .contBox2 a .txt {display: block; position: absolute;top: 0;left: 0px;text-align: left;background: #fff;padding: 50px 21px ;}
+#section2 #inner .introduce .Box .contBox2:hover, #section2 #inner .introduce .list .contBox2:focus {border: 3px solid #f8b922; transition: all 0.1s;}
+
+/* contBox3 */
+#section2 #inner .introduce .Box .contBox3 {position: absolute;right: 2%;top: 58%;box-shadow: 10px 5px 5px #e4e4e4;}
+#section2 #inner .introduce .Box .contBox3 a .txt {display: block; position: absolute;top: 0;right: 0px;text-align: right;background: #fff;padding: 50px 21px ;}
+#section2 #inner .introduce .Box .contBox3:hover, #section2 #inner .introduce .list .contBox1:focus {border: 3px solid #f8b922; transition: all 0.1s;}
+
+
+/* section3 */
+#section3 {width: 100%;height: auto;background-image: url(../images/se03_bg.jpg);background-repeat: no-repeat; background-attachment: fixed;background-size: cover;overflow: hidden;position: relative;}
+#section3 #inner .img {position: absolute;top: -10%;left: 25%;width: 100%;}
+#section3 #inner .img img {width: 50%;}
+#section3 #inner .content {width: 60%;position: absolute;left: 50%;top: 50%;transform: translateX(-50%);text-align: center;color: #fff; }
+#section3 #inner .content .tit {font-size: 2.5em;text-transform: uppercase;font-family: 'Montserrat', sans-serif;padding-bottom: 30px;}
+#section3 #inner .content p {font-size: 1.5em;line-height: 1.5;font-weight: normal;}
+#section3 #inner .content>.leftBox {width: 50%;float: left;position: relative;animation: fadeinUp 1s ease-in-out;}
+#section3 #inner .content>.leftBox:before {content: '';width: 500px;height: 300px;background: #3d3d3d7a;position: absolute; left: 7%;top: -50%;z-index: -1; clear: both;}
+#section3 #inner .content>.rightBox {width: 50%;float: right; position: relative;animation: fadeinUp 1s ease-in-out;}
+#section3 #inner .content>.rightBox:before {content: '';width: 500px;height: 300px;background: #3d3d3d7a;position: absolute; left: 7%;top: -50%;z-index: -1;clear: both;}
+@keyframes fadeinUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* section4 */
+#section4 {width: 100%;height: auto; background: #fff; position: relative;padding-top: 130px;}
+#section4 #inner .line {display: block; position: absolute; top:0; width: 1px; height: 100%;background: #eee;}
+#section4 #inner .line.a {left: 15%;}
+#section4 #inner .line.b {left: 50%;}
+#section4 #inner .line.c {left: 85%;}
+#section4 #inner .tit {font-size: 3em;text-transform: uppercase;font-family: 'Montserrat', sans-serif;font-weight: bold;position: absolute;top: 10%;left: 15%;letter-spacing: 1.5px;}
+#section4 #inner .tit>p {font-size: 18px;font-weight: normal; letter-spacing: 0;}
+#section4 #inner .slideBox {width: 1200px; margin:auto;position: relative; height: 500px; margin-top: 50px;}
+#section4 #inner .slideBox .list {width: 1500px; position:absolute; right: -50%;}
+#section4 #inner .slideBox .list li { float: left; margin-right: 40px;}
+#section4 #inner .slideBox .list li a {display: block;width: 100%; height: 100%;position: relative;}
+#section4 #inner .slideBox .list li a img {width: 100%;height: auto; overflow: hidden; position: relative;}
+#section4 #inner .slideBox .list li a .txtBox {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);text-align: center;color: #fff;width: 100%;height: 100%;background: #00000097;}
+#section4 #inner .slideBox .list li a .title {font-size: 2.5em;position: absolute;top: 42%; left: 50%;transform: translate(-50%, -50%);}
+#section4 #inner .slideBox .list li a .txtBox .txt {font-size: 1.5em;position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);}
+#section4 #inner .slideBox .list .moreBtn {font-size: 1.2em; position: absolute; bottom: 38%;left: 42%;background: #f8b922;color: #fff; padding: 5px 30px;border-radius: 10px;}
+
+#section4 #inner .intCont {width: 100%;height: 600px;position: relative;}
+#section4 #inner .intCont>.txtAni {position: absolute;top: 5%;right: 40%;animation: txtAni 8s linear infinite;transform-origin: 50% 50%;}
+/* txtAni*/
+@keyframes txtAni {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#section4 #inner .intCont>.txtBox {float: left;width: 100%;position: absolute;top: 25%;left: 0; }
+#section4 #inner .intCont>.txtBox>.maintxt {font-size: 3em;color: #333;}
+#section4 #inner .intCont>.introduce {width: 700px;height: 100%; float: right;}
+
+
+/* slick-dots */
+#section4 #inner .slideBox .list .slick-dots  {position: absolute;left: -190px;top: 50%; transform: translateY(-50%); width: 10%;}
+#section4 #inner .slideBox .list .slick-dots button {height: 35px; background: none; border: none; font-size: 0px; position: relative; padding-left:40px; margin-bottom:50px; letter-spacing: -1px; text-align: left;}
+
+/* 가상선택자로 숫자만들기 */
+#section4 #inner .slideBox .list .slick-dots button:before {content:'01'; font-weight: bold; color: #666; font-size: 30px;  font-family: 'Montserrat', sans-serif; position: absolute; top:0; left:0;}
+#section4 #inner .slideBox .list .slick-dots li:nth-child(2) button:before {content:'02';}
+#section4 #inner .slideBox .list .slick-dots li:nth-child(3) button:before {content:'03';}
+#section4 #inner .slideBox .list .slick-dots li:nth-child(4) button:before {content:'04';}
+#section4 #inner .slideBox .list .slick-dots li:nth-child(5) button:before {content:'05';}
+#section4 #inner .slideBox .list .slick-dots li:nth-child(6) button:before {content:'06';}
+#section4 #inner .slideBox .list .slick-dots button:hover {cursor: pointer;}
+
+
+/* 밑줄 애니메이션 */
+#section4 #inner .slideBox .list .slick-dots .slick-active {position: relative; transition: all 0.3s;}
+#section4 #inner .slideBox .list .slick-dots .slick-active:after {content: ''; width: 40px; height: 4px; background: #f8b922; position: absolute; bottom: 45px; left: -1px; animation-name: line; animation-duration: 0.3s;}
+
+
+/* section5 */
+#section5 {width: 100%;height: auto;background-image: url(../images/se05_bg.png);background-attachment: fixed;background-repeat: no-repeat;background-size: cover;position: relative; overflow: hidden;}
+
+#section5 #inner .tit {font-size: 4em;text-transform: uppercase;font-family: 'Montserrat', sans-serif;font-weight: bold;text-align: center; letter-spacing: 1.5px;position: absolute;top: 30%; left: 50%;transform: translateX(-50%);color: #fff;z-index: 2;}
+#section5 #inner .content {display: flex; justify-content: space-between;flex-direction: row;position: absolute;top: 250px;left: 0;width: 100%;}
+#section5 #inner .content .box {width: 33.3333%;background: #00000097;padding: 150px 0;}
+#section5 #inner .content .box .i-box {width: 100%;text-align: center;}
+#section5 #inner .content .box .i-box img {width: auto;}
+#section5 #inner .content .box .t-box {text-align: center; font-size: 2em;color: #fff;text-transform: uppercase;padding-top: 20px;letter-spacing: 1.5px;}
+
+/* #section5 #inner dl.req_box {box-sizing: border-box;}
+#section5 #inner dl.req_box dt {font-size: 2em;text-align: center;padding-bottom: 50px;}
+#section5 #inner .input_wrap {width: 100%;display: flex;flex-direction: column;}
+#section5 #inner .input_wrap>.required {font-size: 1.8em;padding: 10px 0;}
+#section5 #inner .input_wrap>.required> input {border: none;font-size: 16px; box-sizing: border-box;width: 20%;padding: 0 10px; height: 100%; outline: none;background: transparent;border-bottom: 2px solid #fff;margin-left: 10px;color:#fff}
+#section5 #inner .input_wrap>.required> #company {width: 30%;}
+#section5 #inner .input_wrap>.required> #phone1,
+#section5 #inner .input_wrap>.required> #phone2,
+#section5 #inner .input_wrap>.required> #phone3 {width: 15%; text-align: center;}
+#section5 #inner .input_wrap>.required> input::-webkit-inner-spin-button {appearance: none;-moz-appearance: none;-webkit-appearance: none;}
+#section5 #inner .input_wrap>.required> .type_mail {width: 20%;background: red;}
+#section5 #inner .input_wrap> select {width: 15%;} */
+
+
+
+/* footer */
+.footer {height: auto;width: 100%;overflow: hidden;background: #fff;height: 100px;line-height: 100px;}
+.footer .boxContent {text-align: center;}
+.footer .boxContent h3 {float: left;position: absolute;left: 27%;top: 50%;transform: translateY(-50%);}
+.footer .boxContent h3 img {width: 100%;}
+.footer .boxContent .add {position: absolute;top: 50%;right:27%;transform: translate(-50%, -50%);font-size: 1em;color: #333;}
+/*rightNav*/
+.fullPageWrap {position: relative;}
+.fullPageWrap .rightNav {position: fixed; top:40%; right: 40px;width: 100px; z-index: 1000;}
+.fullPageWrap .rightNav li {height: 30px;line-height: 30px;}
+.fullPageWrap .rightNav li a {display: block;  width: 100%; height: 100%;  color:#000; font-size: 15px;position: relative; text-align: left;}
+.fullPageWrap .rightNav li a span {display: block;  text-align: right;position: absolute; top:0; right: 50px; opacity: 0; transition: all 0.2s ease;}
+.fullPageWrap .rightNav li a:after {content: ''; display: block; position: absolute; top:50%; right: 0; width: 8px;height: 8px; background: rgba(104, 104, 104, 0.5); border-radius: 4px;margin-top: -4px; }
+
+/*.rightNav -motion*/
+.fullPageWrap .rightNav li.active a span {opacity: 1; right: 30px; transition: all 0.2s ease-in-out;}
+.fullPageWrap .rightNav li.active a:after{right:-2px; width: 12px; height: 12px; border:2px solid #f8b922; background: rgba(255,255,255,0); border-radius: 12px; box-sizing: border-box;}
+
+
+
+
+
+
+
+
+
+
+
