@@ -507,6 +507,14 @@ br.mo {display: block;}
 
 
 
+
+
+/* 1500px */
+@media screen and (max-width: 1500px) {
+  /* daum-map */
+ .root_daum_roughmap {width:100% !important;}
+}
+
 /* 1200px~1499px */
 @media screen and (min-width: 1200px) and (max-width: 1499px) {
 
@@ -533,6 +541,7 @@ br.mo {display: block;}
   .areaServ #inner .serCont>.mapSer img {
     width: 100% !important;
   }
+  
 
 }
 
@@ -1539,17 +1548,23 @@ box-sizing: border-box;
 border: none;
 }
 /* SE06 */
+.areaServ #inner .serCont {
+  flex-direction: column !important;
+}
+.areaServ #inner .serCont>.timeSer {
+  padding-bottom: 10px !important;
+}
 .areaServ #inner .serCont>.timeSer img {
-width: 100%;
+width: 100% !important;
 }
 .areaServ #inner .serCont>.mapSer img {
-width: 100%
+width: 100% !important;
 }
 .areaServ #inner .serCont>.officeNum img {
-width: 100%;
+width: 100% !important;
 }
 .areaServ #inner .serCont>.mapSection {
-font-size: 0.8em;
+font-size: 0.8em !important;
 }
 .areaServ #inner .serCont>.mapSer>.mapSection .navMap{
 padding-top: 10px;
@@ -1559,6 +1574,10 @@ padding-bottom: 10px;
 padding-top: 10px;
 padding-bottom: 10px;
 }
+.areaServ #inner .officeNum img {
+  width: 100%;
+}
+
 
 .float-menu {
 right: 20px !important;
@@ -2006,6 +2025,12 @@ top: -150px;
   border: none;
 }
 /* SE06 */
+.areaServ #inner .serCont {
+  flex-direction: column !important;
+}
+.areaServ #inner .serCont>.timeSer {
+  padding-bottom: 10px !important;
+}
 .areaServ #inner .serCont>.timeSer img {
   width: 100%;
 }
@@ -2026,9 +2051,16 @@ top: -150px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.areaServ #inner .officeNum img {
+  width: 100%;
+}
+
 
 .float-menu {
   right: 20px !important;
+}
+.float-menu a img {
+  width: 100%;
 }
 .float-menu .tel {
   display: block !important;
