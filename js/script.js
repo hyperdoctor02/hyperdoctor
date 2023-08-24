@@ -2,7 +2,9 @@
  //1.풀페이지 스크롤
 $(function(){
     $('#fullpage').fullpage({
-           fingersonly: true,
+          autoScrolling:true,
+          scrollHorizontally: true,
+          fingersonly: true,
 			anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
 			menu: '.rightNav',
     });
@@ -31,15 +33,15 @@ $(function(){
         dots: true, 
         autoplay: false, //자동재생   
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplaySpeed: 6000, 
         pauseOnHover:true, //호버시 멈추도록 true로 바꿔줌
         pauseOnFocus:true //호버시 멈추도록 true로 바꿔줌
     });
-    $(".list #slick-slide-control1").text("인쇄물 디자인");
-    $(".list #slick-slide-control2").text("온라인 마케팅");
-    $(".list #slick-slide-control3").text("개원 컨설팅");
+    $(".list #slick-slide-control1").text("온라인 제작");
+    $(".list #slick-slide-control2").text("병의원 커뮤니티 제작");
+    $(".list #slick-slide-control3").text("온라인개발");
     $(".list #slick-slide-control4").text("가맹점사업");
     $(".list #slick-slide-control5").text("병의원 운영교육");
     $(".list #slick-slide-control6").text("영상제작");
