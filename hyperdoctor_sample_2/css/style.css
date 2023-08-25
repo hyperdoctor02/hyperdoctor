@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap");
+
 
 /* reset */
 * {margin: 0;padding: 0;}
@@ -69,7 +71,7 @@ body {
   #top_group h1 {
     width: 270px;
     height: 52px;
-    background: url(../img/Logo-2.png) no-repeat;
+    background: url(../img/Logo-3.png) no-repeat;
     text-indent: -9999px;
     position: absolute;
     top: 50%;
@@ -119,7 +121,7 @@ body {
 .visual .slide {width: 100%;height: 100%;border: none;}
 .visual .slide .visual01 {
   position: relative;
-  background: url(../img/visual_01.png) center;
+  background: url(../img/visual_01-1.png) center;
   background-size: cover;
 }
 .visual .slide .visual01 img {
@@ -130,7 +132,7 @@ body {
 }
 .visual .slide .visual02 {
   position: relative;
-  background: url(../img/visual_02.png) center;
+  background: url(../img/visual_02-1.png) center;
   background-size: cover;
   position: relative;
 }
@@ -251,7 +253,7 @@ body {
 
 
 /* SE03 */
-.aboutUs {width: 100%;height: 100%;margin: 0 auto;overflow: hidden;padding-top: 130px;background: url(../img/SE03_about-bg.png);background-attachment: fixed;background-size: cover; overflow: hidden;}
+.aboutUs {width: 100%;height: 100%;margin: 0 auto;overflow: hidden;padding-top: 130px;background: url(../img/SE03_about-bg-1.png);background-attachment: fixed;background-size: cover; overflow: hidden;}
 .aboutUs #inner h2.Tit {color: #fff;margin-bottom: 30px;}
 
 
@@ -982,14 +984,14 @@ footer #inner .txt {
 
 .visual .slide .visual01  {
   width: 100%;
-  background: url(../img/visual_01-tablet.png);
+  background: url(../img/visual_01-tablet-1.png);
   background-repeat: no-repeat;
 
 }
 
 .visual .slide .visual02  {
   width: 100%;
-  background: url(../img/visual_02-tablet.png);
+  background: url(../img/visual_02-tablet-1.png);
   background-repeat: no-repeat;
 }
 
@@ -1922,7 +1924,15 @@ footer #inner .tablet-txt span {color: #ebebeb;font-size: 0.5rem;}
       }
 }
 
+/* 480px~767px */
+@media screen and (min-width: 480px) and (max-width:767px){
 
+
+  #top_group #logo {
+    background: url(../img/mo_logo-2.png) no-repeat !important;
+  }
+
+}
 /* 479px */
   @media screen and (max-width: 479px) {
 
@@ -1936,7 +1946,7 @@ footer #inner .tablet-txt span {color: #ebebeb;font-size: 0.5rem;}
       top: 50% !important;
       -webkit-transform: translate(0, -50%) !important;
               transform: translate(0, -50%) !important;
-      background: url(../img/mo_logo.png) no-repeat !important;
+      background: url(../img/mo_logo-2.png) no-repeat !important;
     }
     #top_group {
       height: 80px !important;

@@ -123,7 +123,7 @@ li {list-style: none;}
 #section4 #inner .slideBox .list li a .txtBox {position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);text-align: center;color: #fff;}
 #section4 #inner .slideBox .list li a .txtBox> .title {font-size: 3.5em;font-weight: bold;}
 #section4 #inner .slideBox .list li a .txtBox> .txt {font-size: 1.9em;font-weight: normal;}
-#section4 #inner .slideBox .list li a .moreBtn {font-size: 3.5em;position: absolute;left: 50%;bottom: 0px;transform: translateX(-50%);color: #fff;background: #f8b922;width: 100%;text-align: center;padding: 40px 10px;box-sizing: border-box;}
+#section4 #inner .slideBox .list li a .moreBtn {font-size: 2.5em;position: absolute;left: 50%;bottom: 0px;transform: translateX(-50%);color: #fff;background: #f8b922;width: 100%;text-align: center;padding: 40px 10px;box-sizing: border-box;}
 /* #section4 #inner .slideBox {width: 1200px; margin:auto;position: relative; height: 500px; margin-top: 50px;}
 #section4 #inner .slideBox .list {width: 1500px; position:absolute; right: -50%;}
 #section4 #inner .slideBox .list li { float: left; margin-right: 40px;}
